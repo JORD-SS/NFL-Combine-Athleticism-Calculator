@@ -40,16 +40,6 @@ heights = combine["Ht"].str.split(pat="-", expand=True)
 heights[[0, 1]] = heights[[0, 1]].apply(pd.to_numeric)
 combine["Ht"] = (heights[0] * 12) + heights[1]
 
-
-def get_player(combine):
-    while True:
-        player = input("Enter a participant from the 2013-2022 NFL Combine: ")
-        if player not in combine.index:
-            print("Player is not in dataset, try someone else.")
-        else:
-            return player
-
-
 player_name = get_player(combine)
 player_data = combine.loc[player_name]
 
