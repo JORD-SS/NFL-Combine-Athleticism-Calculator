@@ -2,9 +2,6 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 
-# User Input Function
-
-
 def get_player(combine):
 
     while True:
@@ -14,8 +11,6 @@ def get_player(combine):
         else:
             return player
 
-
-# Reading CSV's
 combine_2013 = pd.read_csv('Datasets/2013_combine.csv')
 combine_2014 = pd.read_csv('Datasets/2014_combine.csv')
 combine_2015 = pd.read_csv('Datasets/2015_combine.csv')
